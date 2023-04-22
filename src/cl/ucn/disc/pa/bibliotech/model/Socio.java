@@ -38,7 +38,7 @@ public final class Socio {
     /**
      * Numero del socio.
      */
-    private int numeroDeSocio;
+    private final int numeroDeSocio;
 
     /**
      * Contrasenia del socio.
@@ -48,7 +48,7 @@ public final class Socio {
     /**
      * Libros que el Socio tiene en prestamo (maximo 10).
      */
-    private Libro[] librosEnPrestamo = new Libro[10];
+    private final Libro[] librosEnPrestamo = new Libro[10];
 
     /**
      * The Constructor.
@@ -128,9 +128,6 @@ public final class Socio {
         return this.contrasenia;
     }
 
-    public Libro[] getLibrosEnPrestamo() {
-        return librosEnPrestamo;
-    }
 
     /**
      * Agrega un libro en prestamo al Socio.

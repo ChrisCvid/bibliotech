@@ -14,31 +14,31 @@ public final class Libro {
     /**
      * The ISBN.
      */
-    private String isbn;
+    private final String isbn;
 
     /**
      * The Titulo.
      */
-    private String titulo;
+    private final String titulo;
 
     /**
      * The Author.
      */
-    private String autor;
+    private final String autor;
 
     /**
      * The Categoria
      */
-    private String categoria;
+    private final String categoria;
     /**
      * The calificacion.
      */
-    private double promCalificacion =0;// TODO: Agregar la calificacion.
+    private double promCalificacion;
 
 
-    private double calificacion=0;
+    private double calificacion;
 
-    private double contCalificacion=0;
+    private double contCalificacion;
 
     private int cantLibro;
 

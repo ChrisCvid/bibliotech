@@ -1,0 +1,22 @@
+[
+  {
+    "isbn": "1491910771",
+    "titulo": "Head First Java: A Brain-Friendly Guide",
+    "autor": " Kathy Sierra",
+    "categoria": "Programming Languages",
+    "promCalificacion": 2.0,
+    "calificacion": 0.0,
+    "contCalificacion": 3.0,
+    "cantLibro": 0
+  },
+  {
+    "isbn": "14919",
+    "titulo": "no quiero java",
+    "autor": "Sierra",
+    "categoria": "Programming Languages",
+    "promCalificacion": 5.0,
+    "calificacion": 0.0,
+    "contCalificacion": 3.0,
+    "cantLibro": 1
+  }
+]

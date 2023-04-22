@@ -76,7 +76,6 @@ public final class Sistema {
 
     /**
      * Activa (inicia sesion) de un socio en el sistema.
-     *
      * @param numeroDeSocio a utilizar.
      * @param contrasenia   a validar.
      */
@@ -87,6 +86,7 @@ public final class Sistema {
             throw new IllegalArgumentException ("El numero de socio no es valido!");
         }
 
+        //Validacion de la contraseña
         Socio socio =this.BuscarSocio (String.valueOf (numeroDeSocio));
         String contraseniaSocio= socio.getContrasenia ();
         if(!contraseniaSocio.equals (contrasenia)){
@@ -107,7 +107,6 @@ public final class Sistema {
 
     /**
      * Metodo que mueve un libro de los disponibles y lo ingresa a un Socio.
-     *
      * @param isbn del libro a prestar.
      */
     public void realizarPrestamoLibro(final String isbn) throws IOException {
@@ -139,7 +138,6 @@ public final class Sistema {
 
     /**
      * Obtiene un String que representa el listado completo de libros disponibles.
-     *
      * @return the String con la informacion de los libros disponibles.
      */
     public String obtegerCatalogoLibros() {
@@ -160,7 +158,6 @@ public final class Sistema {
 
     /**
      * Metodo que busca un libro en los libros disponibles.
-     *
      * @param isbn a buscar.
      * @return el libro o null si no fue encontrado.l
      */
@@ -178,7 +175,6 @@ public final class Sistema {
 
     /**
      * Lee los archivos libros.json y socios.json.
-     *
      * @throws FileNotFoundException si alguno de los archivos no se encuentra.
      */
     private void cargarInformacion() throws FileNotFoundException {
@@ -190,7 +186,6 @@ public final class Sistema {
 
     /**
      * Guarda los arreglos libros y socios en los archivos libros.json y socios.json.
-     *
      * @throws IOException en caso de algun error.
      */
     private void guardarInformacion() throws IOException {
@@ -207,6 +202,9 @@ public final class Sistema {
 
     }
 
+    /**
+     * @return Datos del socio.
+     */
     public String obtenerDatosSocioLogeado() {
         if (this.socio == null) {
             throw new IllegalArgumentException ("No hay un Socio logeado");
@@ -216,14 +214,22 @@ public final class Sistema {
                 + "Correo Electronico: " + this.socio.getCorreoElectronico ();
     }
 
+    /**
+     * @param isbn del libro.
+     * @param calificacion del libro.
+     * @throws IOException si no existe o no está disponible el libro
+     */
     public void calificarLibro(String isbn , int calificacion) throws IOException {
         double cont;
         double totalCalif = 0;
         
         Libro libro =this.buscarLibro (isbn);
+        //validacion del libro
         if (libro == null) {
             throw new IllegalArgumentException ("Libro con isbn " + isbn + " no existe o no se encuentra disponible.");
         }
+
+        //calculo calificacnion del libro
         cont =libro.getContCalificacion ();
         cont++;
         totalCalif= libro.getCalificacion ();
@@ -237,6 +243,11 @@ public final class Sistema {
     }
 
 
+    /**
+     * Guarda el nombre editado
+     * @param nombre del socio.
+     * @throws IOException si hay algun error.
+     */
     public void editarNombre(String nombre) throws IOException {
         socio.setNombre (nombre);
 
@@ -244,21 +255,41 @@ public final class Sistema {
 
     }
 
+    /**
+     * Guarda el apellido editado
+     * @param apellido del socio.
+     * @throws IOException si hay algun error
+     */
     public void editarApellido(String apellido) throws IOException {
         socio.setApellido (apellido);
         guardarInformacion ();
     }
 
-    public void editarContrasenia(String apellido) throws IOException {
-        socio.setContrasenia (apellido);
+    /**
+     * Guarda la contraseña nueva
+     * @param contrasenia del socio.
+     * @throws IOException si hay algun error
+     */
+    public void editarContrasenia(String contrasenia) throws IOException {
+        socio.setContrasenia (contrasenia);
         guardarInformacion ();
     }
 
-    public void editarCorreoElectronico(String apellido) throws IOException {
-        socio.setCorreoElectronico (apellido);
+    /**
+     * Guarda el nuevo correo electronico
+     * @param correo del socio.
+     * @throws IOException si hay algun error
+     */
+    public void editarCorreoElectronico(String correo) throws IOException {
+        socio.setCorreoElectronico (correo);
         guardarInformacion ();
     }
 
+    /**
+     * Busca el socio por su numero
+     * @param numeroDeSocio a buscar
+     * @return socio.
+     */
     private Socio BuscarSocio(final String numeroDeSocio) {
         // recorro el arreglo de libros.
 

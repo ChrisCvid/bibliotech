@@ -2,6 +2,82 @@
 left to right direction
 skin rose
 
-' TODO: Add the class model
+class Socio {
+    ..Atributos..
+    -nombre : String
+    -apellido : String
+    -correoElectronico : String
+    -numeroDeSocio : int
+    -contrasenia : String
+    -librosEnPrestamo : Libro[10]
+    ....
+    +Socio(nombre: String, apellido: String , correoElectronico: String , numeroDeSocio: int, contrasenia: String)
+    +getNombre() : String
+    +getApellido() : String
+    +getNombreCompleto() : String
+    +getCorreoElectronico() : String
+    +getNumeroDeSocio() : int
+    +getContrasenia() : String
+    +agregarLibro(Libro libro): void
+    +setNombre(nombre: String): void
+    +setApellido(apellido: String): void
+    +setCorreoElectronico(correoElectronico: String): void
+    +setContrasenia(contrasenia: String): void
+
+}
+
+class Libro {
+    ..Atributos..
+    -isbn : String
+    -titulo : String
+    -autor : String
+    -categoria : String
+    -promCalificacion : double
+    -calificacion : double
+    -contCalificacion : double
+    -cantLibro : int
+    ....
+    +setContCalificacion(setContCalificacion: double)
+    +setCantLibro(cantLibro: int)
+    +setCalificacion(calificacion: double)
+    +setPromCalificacion(promCalificacion: double)
+    +Libro(isbn: final String, titulo: String, autor: String, categoria: String)
+    +getIsbn() : String
+    +getTitulo() : String
+    +getAutor() : String
+    +getCategoria() : String
+    +getPromCalificacion(): double
+    +getContCalificacion(): double
+    +getCalificacion(): double
+    +getCantLibro(): int
+}
+
+class Sistema {
+    ..Atributos..
+    -socios : Socio[]
+    -libros : Libro[]
+    -socio : Socio
+    ....
+    +Sistema()
+    +iniciarSession(numeroDeSocio: int, contrasenia: String): void
+    +cerrarSession(): void
+    +realizarPrestamoLibro(isbn: String): void
+    +obtenerCatalogoLibros(): String
+    +buscarLibro(isbn: String): Libro
+    +cargarInformacion(): void
+    +guardarInformacion(): void
+    +obtenerDatosSocioLogeado(): String
+    +calificarLibro(isbn: String, calificacion: int): void
+    +editarNombre(nombre: String): void
+    +editarApellido(apellido: String): void
+    +editarContrasenia(contrasenia: String): void
+    +editarCorreoElectronico(correo: String) void
+    +BuscarSocio(numeroDeSocio: String): Socio
+
+}
+
+Sistema "1" -up-> "1.." Socio : Contiene >
+Sistema "1" -down-> "1.." Libro : Contiene >
+
 
 @enduml

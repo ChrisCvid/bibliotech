@@ -87,20 +87,7 @@ public final class Socio {
     }
 
     /**
-     * @return el nombre del Socio.
-     */
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    /**
-     * @return el apellido del Socio.
-     */
-    public String getApellido() {
-        return this.apellido;
-    }
-
-    /**
+     * Getter
      * @return el nombre completo del Socio.
      */
     public String getNombreCompleto() {
@@ -108,6 +95,7 @@ public final class Socio {
     }
 
     /**
+     * Getter
      * @return el correo electronico del Socio.
      */
     public String getCorreoElectronico() {
@@ -115,6 +103,7 @@ public final class Socio {
     }
 
     /**
+     * Getter
      * @return el numero del Socio.
      */
     public int getNumeroDeSocio() {
@@ -122,6 +111,7 @@ public final class Socio {
     }
 
     /**
+     * Getter
      * @return la contrasenia del Socio.
      */
     public String getContrasenia() {
@@ -131,7 +121,6 @@ public final class Socio {
 
     /**
      * Agrega un libro en prestamo al Socio.
-     *
      * @param libro a agregar.
      */
     public void agregarLibro(final Libro libro) {
@@ -145,18 +134,30 @@ public final class Socio {
         StdOut.println ("El prestamo del libro ha sido exitoso!");
     }
 
+    /**
+     * @param nombre del socio.
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * @param apellido del socio.
+     */
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
+    /**
+     * @param correoElectronico del socio.
+     */
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
     }
 
+    /**
+     * @param contrasenia del socio.
+     */
     public void setContrasenia(String contrasenia) {
         this.contrasenia = contrasenia;
     }

@@ -30,16 +30,25 @@ public final class Libro {
      * The Categoria
      */
     private final String categoria;
+
     /**
-     * The calificacion.
+     * Promedio calificacion
      */
     private double promCalificacion;
 
-
+    /**
+     * The calificacion.
+     */
     private double calificacion;
 
+    /**
+     * Contador de calificaciones
+     */
     private double contCalificacion;
 
+    /**
+     * Cantidad disponible de libros
+     */
     private int cantLibro;
 
 
@@ -59,7 +68,7 @@ public final class Libro {
      */
     public Libro(final String isbn, final String titulo, final String autor, final String categoria,final double calificacion,final int contCalificacion,final double Promcalificacion, final int cantLibro) {
 
-        // TODO: agregar validacion de ISBN
+        // Validacion del ISBN
         if (isbn == null || isbn.length() == 0) {
             throw new IllegalArgumentException("Isbn no valida!");
         }
@@ -72,14 +81,14 @@ public final class Libro {
 
         this.titulo = titulo;
 
+        //Validacion del autor
         if (autor == null || autor.length() == 0) {
             throw new IllegalArgumentException("Autor no valido!");
         }
-        // TODO: Agregar validacion
 
         this.autor = autor;
 
-        // TODO: Agregar validacion
+        // Validacion de la categoria
         if (categoria == null || categoria.length() == 0) {
             throw new IllegalArgumentException("Categoria no valida!");
         }
@@ -123,32 +132,48 @@ public final class Libro {
     }
 
     /**
-     * @return the Calificacion.
+     * @return El promedio de las calificaciones
      */
     public double getPromCalificacion() {return this.promCalificacion;}
+
     /**
-     * @set the Calificacion.
-     *
+     * @return cantidad de calificaciones.
      */
     public double getContCalificacion() {
         return contCalificacion;
     }
 
+    /**
+     * @return La calificacion.
+     */
     public double getCalificacion() {
         return calificacion;
     }
 
+    /**
+     * @return La cantidad disp. del libro
+     */
     public int getCantLibro() {
         return cantLibro;
     }
+
+    /**
+     * @param cantLibro cantidadad del libro.
+     */
     public void setCantLibro(int cantLibro) {
       this.cantLibro= cantLibro;
     }
 
+    /**
+     * @param calificacion del libro.
+     */
     public void setCalificacion(double calificacion) {
         this.calificacion = calificacion;
     }
 
+    /**
+     * @param promCalificacion del libro.
+     */
     public void setPromCalificacion(double promCalificacion) {
         this.promCalificacion = promCalificacion;
     }

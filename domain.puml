@@ -45,12 +45,13 @@ entity CalificarLibro{
 
 Sistema "1" -up-> "1..*" Socio : Contiene >
 Sistema "1" -down-> "1..*" Libro : Contiene >
-Socio "1" -> "1..*" Libro : Arrienda >
+Socio "1..*" -> "1..*" Libro : Arrienda >
 Sistema "1" -up-> "1..*" PrestamoDeLibros : Permite >
 Socio "1..*" -> "1..*" PrestamoDeLibros : Solicita >
-Sistema "1..*" -- "1..*" EditarInformacion : Permite >
+Sistema "1" --> "1..*" EditarInformacion : Permite >
 Libro "1" -- "1" CalificarLibro : Recibe <
-Socio "1" -- "1" CalificarLibro : Genera >
+Socio "1" --> "1" CalificarLibro : Genera >
+Sistema "1" --> "1..*" CalificarLibro : Permite >
 
 
 @enduml

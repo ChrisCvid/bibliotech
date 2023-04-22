@@ -61,20 +61,28 @@ public final class Socio {
      */
     public Socio(String nombre, String apellido, String correoElectronico, int numeroDeSocio, String contrasenia) {
 
-        // TODO: agregar validacion
+        if (nombre == null || nombre.length() == 0) {
+            throw new IllegalArgumentException("nombre no valido!");
+        }
         this.nombre = nombre;
 
-        // TODO: agregar validacion
+        if (apellido == null || apellido.length() == 0) {
+            throw new IllegalArgumentException("apellido no valido!");
+        }
         this.apellido = apellido;
 
         // metodo estatico para validacion de email.
         Utils.validarEmail(correoElectronico);
         this.correoElectronico = correoElectronico;
 
-        // TODO: agregar validacion
+        if (numeroDeSocio <= 0) {
+            throw new IllegalArgumentException("Numero de socio no valido!");
+        }
         this.numeroDeSocio = numeroDeSocio;
 
-        // TODO: agregar validacion
+        if (contrasenia == null || contrasenia.length() == 0) {
+            throw new IllegalArgumentException("contrasenia no valido!");
+        }
         this.contrasenia = contrasenia;
     }
 
@@ -138,10 +146,6 @@ public final class Socio {
         Utils.append(this.librosEnPrestamo, libro);
         //
         StdOut.println ("El prestamo del libro ha sido exitoso!");
-    }
-
-    public void setLibrosEnPrestamo() {
-        this.librosEnPrestamo = librosEnPrestamo;
     }
 
     public void setNombre(String nombre) {

@@ -154,7 +154,7 @@ public final class Main {
                     [5] Volver atrás
                     """);
             StdOut.print("Escoja una opción: ");
-            opcion = StdIn.readLine();
+            opcion = StdIn.readString ();
 
             switch (opcion) {
                 case "1" -> editarNombre(sistema);

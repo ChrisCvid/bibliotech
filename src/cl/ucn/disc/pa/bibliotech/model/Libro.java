@@ -60,18 +60,29 @@ public final class Libro {
     public Libro(final String isbn, final String titulo, final String autor, final String categoria,final double calificacion,final int contCalificacion,final double Promcalificacion, final int cantLibro) {
 
         // TODO: agregar validacion de ISBN
+        if (isbn == null || isbn.length() == 0) {
+            throw new IllegalArgumentException("Isbn no valida!");
+        }
         this.isbn = isbn;
 
         // validacion del titulo
         if (titulo == null || titulo.length() == 0) {
             throw new IllegalArgumentException("Titulo no valido!");
         }
+
         this.titulo = titulo;
 
+        if (autor == null || autor.length() == 0) {
+            throw new IllegalArgumentException("Autor no valido!");
+        }
         // TODO: Agregar validacion
+
         this.autor = autor;
 
         // TODO: Agregar validacion
+        if (categoria == null || categoria.length() == 0) {
+            throw new IllegalArgumentException("Categoria no valida!");
+        }
         this.categoria = categoria;
 
         this.calificacion = calificacion;

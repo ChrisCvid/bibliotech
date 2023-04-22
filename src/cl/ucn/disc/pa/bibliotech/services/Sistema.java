@@ -127,8 +127,7 @@ public final class Sistema {
         // agrego el libro al socio.
         this.socio.agregarLibro (libro);
 
-        // TODO: eliminar el libro de los disponibles
-
+        //Se resta la cantidad de libros disponibles
         libro.setCantLibro (libro.getCantLibro ()-1);
 
         // se actualiza la informacion de los archivos

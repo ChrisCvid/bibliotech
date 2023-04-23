@@ -1,0 +1,62 @@
+[
+  {
+    "isbn": "1491910771",
+    "titulo": "Head First Java: A Brain-Friendly Guide",
+    "autor": " Kathy Sierra",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 0.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 1
+  },
+  {
+    "isbn": "1491910772",
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 1.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 1
+  },
+  {
+    "isbn": "1491910773",
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 1.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 1
+  },
+  {
+    "isbn": "1491910774",
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 1.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 0
+  },
+  {
+    "isbn": "1491910775",
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 1.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 0
+  },
+  {
+    "isbn": "1491910776",
+    "titulo": "Effective Java",
+    "autor": "Joshua Bloch",
+    "categoria": "Programming Languages",
+    "promCalificacion": 0.0,
+    "calificacion": 1.0,
+    "contCalificacion": 0.0,
+    "cantLibro": 0
+  }
+]

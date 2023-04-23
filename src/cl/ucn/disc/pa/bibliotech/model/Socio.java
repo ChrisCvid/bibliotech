@@ -124,7 +124,7 @@ public final class Socio {
      * @param libro a agregar.
      */
     public void agregarLibro(final Libro libro) {
-        // validacion
+
             // agrego el libro
             for (int i = 0 ; i < librosEnPrestamo.length ; i++) {
                 if (librosEnPrestamo[ i ] == null) {
@@ -132,6 +132,7 @@ public final class Socio {
                     StdOut.println ("Prestamo del libro realizado.");
                     break;
                 }else if(librosEnPrestamo[i]!=null&&i==4) {
+                    // validacion
                     throw new IllegalArgumentException ("El Socio ya tiene la maxima cantidad de libros en prestamo: " + NUMERO_LIBROS_MAXIMO);
                 }
             }

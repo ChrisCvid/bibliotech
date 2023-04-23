@@ -62,10 +62,10 @@ public final class Sistema {
             this.socios = Utils.append (this.socios , new Socio ("John" , "Doe" , "john.doe@ucn.cl" , 1 , "john123"));
 
             // creo un libro y lo agrego al arreglo de libros.
-            this.libros = Utils.append (this.libros , new Libro ("1491910771" , "Head First Java: A Brain-Friendly Guide" , " Kathy Sierra" , "Programming Languages" , 0,0,0,0));
+            this.libros = Utils.append (this.libros , new Libro ("1491910771" , "Head First Java: A Brain-Friendly Guide" , " Kathy Sierra" , "Programming Languages" , 0,0,0,1));
 
             // creo otro libro y lo agrego al arreglo de libros.
-            this.libros = Utils.append (this.libros , new Libro ("1491910771" , "Effective Java" , "Joshua Bloch" , "Programming Languages" , 1,0,0,0));
+            this.libros = Utils.append (this.libros , new Libro ("1491910772" , "Effective Java" , "Joshua Bloch" , "Programming Languages" , 0,0,0,1));
 
         } finally {
             // guardo la informacion.

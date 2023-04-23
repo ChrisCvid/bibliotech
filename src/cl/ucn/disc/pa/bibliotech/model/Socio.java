@@ -125,14 +125,19 @@ public final class Socio {
      */
     public void agregarLibro(final Libro libro) {
         // validacion
-        if (this.librosEnPrestamo.length == NUMERO_LIBROS_MAXIMO) {
-            throw new IllegalArgumentException("El Socio ya tiene la maxima cantidad de libros en prestamo: " + NUMERO_LIBROS_MAXIMO);
+            // agrego el libro
+            for (int i = 0 ; i < librosEnPrestamo.length ; i++) {
+                if (librosEnPrestamo[ i ] == null) {
+                    this.librosEnPrestamo[ i ] = libro;
+                    StdOut.println ("Prestamo del libro realizado.");
+                    break;
+                }else if(librosEnPrestamo[i]!=null&&i==4) {
+                    throw new IllegalArgumentException ("El Socio ya tiene la maxima cantidad de libros en prestamo: " + NUMERO_LIBROS_MAXIMO);
+                }
+            }
         }
-        // agrego el libro
-        Utils.append(this.librosEnPrestamo, libro);
-        //
-        StdOut.println ("El prestamo del libro ha sido exitoso!");
-    }
+
+
 
     /**
      * @param nombre del socio.
